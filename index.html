@@ -40,7 +40,7 @@
       }
 
       .custom-link {
-            color: #76b900; /* Sets the color to blue */
+            color: #3A8366; /* Sets the color to blue */
             text-decoration: none; /* Removes underline */
       }
 
@@ -102,12 +102,12 @@
   <div class="container">
     <br>
     <h2>NVLM: Open Frontier-Class Multimodal LLMs</h2>
-    <h4> <a href="https://huggingface.co/nvidia/" class="custom-link">Model Weights (coming soon)🤗</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-LM" class="custom-link">Code (coming soon)</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-Energon" class="custom-link">Data Loader</a> &ensp; <a href="https://arxiv.org/" class="custom-link">Paper</a>  </h4>
+    <h4>  <a href="https://arxiv.org/" class="custom-link">Paper</a> &ensp; <a href="https://huggingface.co/nvidia/" class="custom-link">Model Weights (coming soon)🤗</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-LM" class="custom-link">Code (coming soon)</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-Energon" class="custom-link">Data Loader</a> </h4>
     <p>
     Today (September 17th, 2024), we release <a href="https://arxiv.org/" class="custom-link">NVLM</a>, We introduce NVLM 1.0, a family of frontier-class multimodal large language models (LLMs) that achieve state-of-the-art results on vision-language tasks, rivaling the leading proprietary models (e.g., GPT-4o) and open-access models (e.g., Llama 3-V 405B and InternVL 2). Remarkably, NVLM 1.0 shows improved text-only performance over its LLM backbone following multimodal training. We are open-sourcing the model weights and code for the community.
     </p>
 
-    <h4>Overview</h4>
+    <h3>Overview</h3>
     <!-- <h4 class="colored_subtitle">Evaluation on </h4> -->
     
     <figure>
@@ -118,7 +118,7 @@
    NVLM 1.0 versus leading proprietary and open-access multimodal LLMs. Note that the model weights for ∗Llama 3-V have not been released as of the time of this report. The results demonstrate that NVLM 1.0 achieves performance on par with leading models across both vision-language and text-only tasks. Additionally, we compare multimodal LLM to its backbone LLM on text-only tasks. The text performance of InternVL2-Llama3-76B drop significantly after mulitmodal training.  Llama 3-V 70B and 405B show no degradation in text-only tasks, as their LLM backbones are frozen during multimodal training. In contrast, our NVLM-D1.0 72B model demonstrates significant improvements over its text backbone on text-only math and coding benchmarks, with average accuracy increasing by 4.3 points after multimodal training.
     <br>
     
-    <h4>Qualitative Study</h4>
+    <h3>Qualitative Study</h3>
     <!-- <h4 class="colored_subtitle">Evaluation on </h4> -->
     <figure>
     <div class="flex-content" style="text-align: center;">
