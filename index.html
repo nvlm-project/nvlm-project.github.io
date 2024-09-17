@@ -112,7 +112,7 @@
     
     <figure>
       <div class="flex-content" style="text-align: center;">
-        <img class="img-full" src="figs/overview-v7.png">
+        <img class="img-full" src="overview-v7.png">
      </div>
     </figure>
    NVLM 1.0 versus leading proprietary and open-access multimodal LLMs. Note that the model weights for ∗Llama 3-V have not been released as of the time of this report. The results demonstrate that NVLM 1.0 achieves performance on par with leading models across both vision-language and text-only tasks. Additionally, we compare multimodal LLM to its backbone LLM on text-only tasks. The text performance of InternVL2-Llama3-76B drop significantly after mulitmodal training.  Llama 3-V 70B and 405B show no degradation in text-only tasks, as their LLM backbones are frozen during multimodal training. In contrast, our NVLM-D1.0 72B model demonstrates significant improvements over its text backbone on text-only math and coding benchmarks, with average accuracy increasing by 4.3 points after multimodal training.
@@ -122,7 +122,7 @@
     <!-- <h4 class="colored_subtitle">Evaluation on </h4> -->
     <figure>
     <div class="flex-content" style="text-align: center;">
-     <img class="img-full" src="figs/qualitative_examples_sec6v11.png">
+     <img class="img-full" src="qualitative_examples_sec6v11.png">
     </div>
     </figure>
     Our NVLM-D-1.0-72B demonstrates versatile capabilities in various multimodal tasks by jointly utilizing OCR, reasoning, localization, common sense, world knowledge, and coding ability. For instance, our model can understand the humor behind the “abstract vs. paper” meme in Figure 1 (a) by performing OCR to recognize the text labels for each image and using reasoning to grasp why juxtaposing “the abstract” — labeled with a fierce-looking lynx — and “the paper” — labeled with a domestic cat — is humorous. NVLM accurately performs localization to effectively answer locationsensitive questions, such as “What is the difference between the left, middle, and right objects in the image?” in Figure 1 (b). NVLM is capable of performing mathematical reasoning and coding based on visual information, such as tables and handwritten pseudocode, as illustrated in Figure 1 (d) and (e). 
