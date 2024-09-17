@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <meta charvctk_set="UTF-8">
+    <title>Introducing NVLM</title>
+    <style type="text/css">
+
+      /* css for table */
+      .tg  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
+      .tg td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#444;
+        font-family:Arial, sans-serif;font-size:12px;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
+        font-family:Arial, sans-serif;font-size:12px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tg .tg-center{text-align:center;vertical-align:top}
+      .tg .tg-left{text-align:left;vertical-align:top}
+
+      /* css for table */
+      .tt  {border-collapse:collapse;border-color:#9ABAD9;border-spacing:0;}
+      .tt td{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#444;
+        font-family:Arial, sans-serif;font-size:13px;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tt th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:0px;color:#fff;
+        font-family:Arial, sans-serif;font-size:13px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+      .tt .tt-center{text-align:center;vertical-align:top}
+      .tt .tt-left{text-align:left;vertical-align:top}
+      .tt .tt-center_boardertop{text-align:center;vertical-align:top;border-top-width:1.6px}
+      .tt .tt-left_boardertop{text-align:left;vertical-align:top;border-top-width:1.6px}
+
+      /* css for text container */
+      .container {
+        margin: 0 auto; /* Center the container horizontally */
+        max-width: 900px; /* Set the maximum width of the container */
+        text-align: left; /* Left-align the text within the container */
+        padding: 0 20px; /* Optional: Add padding to the container */
+        line-height: 1.5; /* Adjust line height for spacing between lines */
+        font-size: 18px; /* Set the font size for the container */
+      }
+      
+      /* color for subtitle */
+      .colored_subtitle {
+        color: rgb(91, 91, 91); /* Set the color of the text */
+      }
+
+      .custom-link {
+            color: #76b900; /* Sets the color to blue */
+            text-decoration: none; /* Removes underline */
+      }
+
+      .img-chatrag {
+        max-width: 92%; /* Set the maximum width of the image to 100% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+
+      }
+
+      .img-70 {
+        max-width: 70%; /* Set the maximum width of the image to 100% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+
+      }
+
+      .img-75 {
+        max-width: 75%; /* Set the maximum width of the image to 100% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+
+      }
+
+      .img-fit {
+        max-width: 80%; /* Set the maximum width of the image to 80% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+
+      }
+
+      .img-full {
+        max-width: 100%; /* Set the maximum width of the image to 100% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+
+      }
+
+      .img-60 {
+        max-width: 60%; /* Set the maximum width of the image to 100% */
+        height: auto; /* Ensure the aspect ratio of the image is maintained */
+      }
+
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        overflow-x: auto;
+      }
+      .flex-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      code {
+        display: block;
+      }
+      
+    </style>
+  </head>
+
+
+  <div class="container">
+    <br>
+    <h2>NVLM: Open Frontier-Class Multimodal LLMs</h2>
+    <h4> <a href="https://huggingface.co/nvidia/" class="custom-link">Model Weights (coming soon)🤗</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-LM" class="custom-link">Code (coming soon)</a> &ensp; <a href="https://github.com/NVIDIA/Megatron-Energon" class="custom-link">Data Loader</a> &ensp; <a href="https://arxiv.org/" class="custom-link">Paper</a>  </h4>
+    <p>
+    Today (September 17th, 2024), we release <a href="https://arxiv.org/" class="custom-link">NVLM</a>, We introduce NVLM 1.0, a family of frontier-class multimodal large language models (LLMs) that achieve state-of-the-art results on vision-language tasks, rivaling the leading proprietary models (e.g., GPT-4o) and open-access models (e.g., Llama 3-V 405B and InternVL 2). Remarkably, NVLM 1.0 shows improved text-only performance over its LLM backbone following multimodal training. We are open-sourcing the model weights and code for the community.
+    </p>
+
+    <h4>Overview</h4>
+    <!-- <h4 class="colored_subtitle">Evaluation on </h4> -->
+    
+    <figure>
+      <div class="flex-content" style="text-align: center;">
+        <img class="img-full" src="figs/overview-v7.png">
+     </div>
+    </figure>
+   NVLM 1.0 versus leading proprietary and open-access multimodal LLMs. Note that the model weights for ∗Llama 3-V have not been released as of the time of this report. The results demonstrate that NVLM 1.0 achieves performance on par with leading models across both vision-language and text-only tasks. Additionally, we compare multimodal LLM to its backbone LLM on text-only tasks. The text performance of InternVL2-Llama3-76B drop significantly after mulitmodal training.  Llama 3-V 70B and 405B show no degradation in text-only tasks, as their LLM backbones are frozen during multimodal training. In contrast, our NVLM-D1.0 72B model demonstrates significant improvements over its text backbone on text-only math and coding benchmarks, with average accuracy increasing by 4.3 points after multimodal training.
+    <br>
+    
+    <h4>Qualitative Study</h4>
+    <!-- <h4 class="colored_subtitle">Evaluation on </h4> -->
+    <figure>
+    <div class="flex-content" style="text-align: center;">
+     <img class="img-full" src="figs/qualitative_examples_sec6v11.png">
+    </div>
+    </figure>
+    Our NVLM-D-1.0-72B demonstrates versatile capabilities in various multimodal tasks by jointly utilizing OCR, reasoning, localization, common sense, world knowledge, and coding ability. For instance, our model can understand the humor behind the “abstract vs. paper” meme in Figure 1 (a) by performing OCR to recognize the text labels for each image and using reasoning to grasp why juxtaposing “the abstract” — labeled with a fierce-looking lynx — and “the paper” — labeled with a domestic cat — is humorous. NVLM accurately performs localization to effectively answer locationsensitive questions, such as “What is the difference between the left, middle, and right objects in the image?” in Figure 1 (b). NVLM is capable of performing mathematical reasoning and coding based on visual information, such as tables and handwritten pseudocode, as illustrated in Figure 1 (d) and (e). 
+   <br>
+
+
+    
+  <h4>Citation</h4>
+  <pre><code>@article{nvlm2024,
+  title={NVLM: Open Frontier-Class Multimodal LLMs},
+  author={Dai, Wenliang and Lee, Nayeon and Wang, Boxin and Yang, Zhuoling and Liu, Zihan and Barker, Jon and Rintamaki, Tuomas and Shoeybi, Mohammad and Catanzaro, Bryan and Ping, Wei},
+  journal={arXiv preprint},
+  year={2024}}</code></pre>
+  </div>
+  
+  <br><br><br>
+
+</html>
+
+
